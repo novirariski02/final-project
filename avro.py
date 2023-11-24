@@ -18,7 +18,8 @@ dag = DAG('load_avro_data', default_args=default_args, schedule_interval="@daily
 
 # Define the extract_avro_data function
 def extract_avro_data():
-    # Read Avro data from source
+   
+# Read Avro data from source
     import fastavro
     with open('order_item.avro', 'rb') as f:
         reader = fastavro.reader(f)
